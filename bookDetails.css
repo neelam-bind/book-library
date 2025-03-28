@@ -1,0 +1,83 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Base Body Styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #181818;  
+    color: #e0e0e0;             
+    padding: 0;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Header Section */
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    margin-bottom: 0%;
+  }
+  
+
+  #book-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 0%;
+    background-color: #242424;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.8);
+  }
+  
+  /* Book Title */
+  #book-detail h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Book Cover Image */
+  #book-detail img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Book Details Paragraphs */
+  #book-detail p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.4;
+  }
+  
+  /* Bold Labels for Details */
+  #book-detail p strong {
+    color: #ffffff;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    #book-detail {
+      padding: 15px;
+    }
+  
+    #book-detail h1 {
+      font-size: 1.5rem;
+    }
+  
+    #book-detail p {
+      font-size: 0.9rem;
+    }
+  }
+  
