@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>book library</title>
+</head>
+<body>
+    <h1>Book Library Management</h1>
+    <div id="header">
+        <input type="text" id ="search-bar" placeholder="Search by title or author">
+
+        <div id="button-container">
+            <button id="search-btn">Search</button>
+        </div>
+    </div>
+    
+    <div id ="booksContainer">
+    </div>
+
+    <div class="pagination">
+        <button id="prevBtn"><i class="fa-solid fa-arrow-left"></i></button>
+        <span id="pageInfo">1</span>
+        <button id="nextBtn"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

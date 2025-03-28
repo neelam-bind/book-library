@@ -1,0 +1,190 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Base Body Styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #181818;  
+    color: #e0e0e0;             
+    padding: 0;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Header Section */
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    margin-bottom: 0%;
+  }
+  
+  /* Header with search and buttons */
+  #header {
+    margin-top: 0%;
+    display: flex;
+    padding: 20px 20px;
+    border-bottom: 1px solid #545252;
+    gap :8px;
+  }
+  
+  /* Container for the search input */
+  #search-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  #search-bar {
+    padding: 12px 15px;
+    font-size: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: 90px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #222;
+    color: #e0e0e0;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  #search-bar:focus {
+    border-color: #888;
+  }
+  
+  /* Container for the buttons on the right */
+  #button-container {
+    display: flex;
+    gap : 90px;
+    margin-right: 50px;
+    align-items: right;
+  }
+  
+  #search-btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #282828;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 90px;
+  }
+  
+  #search-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+  }
+  
+  /* Books Container */
+  #booksContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+
+  .book {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 350px;
+    background-color: #242424;   
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 15px;
+    text-align: left;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  }
+  
+  .book:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Container for text details inside book card */
+  .book .text-content {
+    flex-grow: 1;
+    padding-right: 5px;
+    font-size: 0.9rem;
+  }
+  
+
+  .book img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  /* Book Title Styling */
+  .book h2 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ffffff;
+  }
+  
+
+  .book p {
+    font-size: 0.7rem;
+    margin: 5px 0;
+    white-space: normal;
+    color: #cccccc;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+  }
+  
+  .pagination button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #282828;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .pagination button:hover {
+    background: #333;
+    transform: translateY(-2px);
+  }
+  
+  .pagination span {
+    font-size: 18px;
+    color: #e0e0e0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+
+  span {
+    font-size: 18px;
+    color: #e0e0e0;
+  }
+  
