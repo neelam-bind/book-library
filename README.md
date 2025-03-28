@@ -19,6 +19,11 @@ A web application that fetches books from an API and displays them in a user-fri
 - **Pagination**: Fetch the next set of books when scrolling to the end of the page.
 - Clicking on a book opens more details in a new tab via **infoLink**.
 
+## 🌐 Live Demo
+
+🔗 **Hosted on Vercel:** [Book Explorer Live](https://book-library-theta-six.vercel.app/)  
+🔗 **GitHub Repository:** [Book Explorer GitHub](https://neelam-bind.github.io/book-library/)  
+
 ## 🛠 Installation & Setup
 
 ### 1. Clone the repository
