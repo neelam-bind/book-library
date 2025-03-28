@@ -32,6 +32,7 @@ git clone https://github.com/your-username/book-explorer.git
 cd book-explorer
 ```
 ### Screenshot
-![image](https://github.com/user-attachments/assets/3054da10-b24c-4553-ac87-d44cf28543af)
+![image](https://github.com/user-attachments/assets/9a2393d1-ffbc-474d-a9e6-02beef1fb1ef)
+
 ![image](https://github.com/user-attachments/assets/48a6b2d8-e9c8-493b-b140-35fa6a18e0bc)
 
