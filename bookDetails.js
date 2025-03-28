@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <p><strong>Publisher:</strong> ${book.volumeInfo.publisher || 'N/A'}</p>
   <p><strong>Language:</strong> ${book.volumeInfo.language || 'N/A'}</p>
   <p><strong>Description:</strong> ${book.volumeInfo.description || 'No description available.'}</p>
+  <a href ="${book.volumeInfo.previewLink}"><button>Rent</button></a>
 `;
   }
   

@@ -66,6 +66,27 @@
     color: #ffffff;
   }
   
+  #book-detail button {
+    background-color: #16a034;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  #book-detail button:hover {
+    background-color: #128f2e;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
   /* Responsive Adjustments */
   @media (max-width: 600px) {
     #book-detail {
