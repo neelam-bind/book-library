@@ -1,294 +1,304 @@
-/* Basic Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-/* Base Body Styles */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #181818;  
-  color: #e0e0e0;             
-  padding: 0;
-  margin: 0;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Header Section */
-h1 {
-  text-align: center;
-  margin: 20px 0;
-  color: #ffffff;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 2.5rem;
-  margin-bottom: 0%;
-}
-
-/* Header with search and buttons */
-#header {
-  margin-top: 0%;
-  display: flex;
-  padding: 20px 20px;
-  border-bottom: 1px solid #545252;
-  gap: 8px;
-}
-
-/* Container for the search input */
-#search-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#search-bar {
-  padding: 12px 15px;
-  font-size: 20px;
-  margin-left: 20%;
-  width: 50%; 
-  max-width: 600px; 
-  min-width: 250px;
-  border: 1px solid #444;
-  border-radius: 4px;
-  background-color: #222;
-  color: #e0e0e0;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
-
-}
-
-#search-bar:focus {
-  border-color: #888;
-}
-
-/* Container for the buttons on the right */
-#button-container {
-  display: flex;
-  gap: 90px;
-  margin-right: 50px;
-  align-items: center;
-}
-
-#search-btn,
-#viewToggle {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: 1px solid #444;
-  border-radius: 4px;
-  background: #282828;
-  color: #e0e0e0;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-right: 90px;
-}
-
-#search-btn:hover,
-#viewToggle:hover {
-  background: #333;
-  transform: translateY(-2px);
-}
-
-#booksContainer {
-  display:grid;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.book {
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-  height: 350px;
-  background-color: #242424;   
-  border: 1px solid #444;
-  border-radius: 4px;
-  padding: 15px;
-  text-align: left;
-  color: white;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-}
-
-.book:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-}
-
-/* Container for text details inside book card */
-.book .text-content {
-  flex-grow: 1;
-  padding-right: 5px;
-  font-size: 0.9rem;
-}
-
-.book img {
-  width: 100%;
-  max-height: 150px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-/* Book Title Styling */
-.book h2 {
-  font-size: 1rem;
-  margin: 0.5rem 0;
-  font-weight: 700;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #ffffff;
-}
-
-.book p {
-  font-size: 0.7rem;
-  margin: 5px 0;
-  white-space: normal;
-  color: #cccccc;
-}
-
-/* Grid view: three columns */
-.grid-view {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 40px;
-  justify-content: center; 
-  max-width: 800px; 
-  margin: 0 auto; /* Centers the grid */
-}
-
-/* List view: one book per row */
-.list-view {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Modify book styling for list view */
-.list-view .book {
-  display: flex;         
-  flex-direction: row;  
-  align-items: center;   
-  width: 80%;           
-  height: auto;       
-  padding: 15px;
-  gap: 20px;
-  margin: 0 auto;
-}
-
-/* Ensure image takes appropriate space */
-.list-view .book img {
-  width: 120px;  
-  height: 150px;  
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-/* Adjust text content to fill remaining space */
-.list-view .book .text-content {
-  flex-grow: 1;
-  font-size: 1rem;
-}
-
-
-
-/* Pagination */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  gap: 10px;
-}
-
-.pagination button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: 1px solid #444;
-  border-radius: 4px;
-  background: #282828;
-  color: #e0e0e0;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.pagination button:hover {
-  background: #333;
-  transform: translateY(-2px);
-}
-
-.pagination span {
-  font-size: 18px;
-  color: #e0e0e0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-span {
-  font-size: 18px;
-  color: #e0e0e0;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  #header {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 10px;
-  }
-  
-  #search-container {
+   * {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #181818;
+    color: #e0e0e0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /*HEADER SECTION*/ 
+  h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin: 20px 0;
+  }
+  
+  #header {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid #545252;
+    gap: 20px;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  /* SEARCH BAR */
+  #search-container {
+    flex: 1;
+    display: flex;
     justify-content: center;
+    align-items: center;
   }
   
   #search-bar {
-    margin-left: 0;
-    max-width: 100%;
+    padding: 12px 15px;
+    font-size: 20px;
+    width: 50%;
+    max-width: 600px;
+    min-width: 250px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #222;
+    color: #e0e0e0;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
   }
   
+  #search-bar:focus {
+    border-color: #888;
+  }
+  
+  /* BUTTON STYLES*/
   #button-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;  
+  }
+  
+  #search-btn,
+  #viewToggle {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #282828;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #search-btn:hover,
+  #viewToggle:hover {
+    background: #333;
+    transform: translateY(-2px);
+  }
+  
+  /* BOOK CONTAINER STYLES */
+  #booksContainer {
+    display: grid;
     justify-content: center;
-    margin: 10px 0 0;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  #search-bar {
-    font-size: 18px;
-    padding: 8px 10px;
+    gap: 20px;
+    padding: 20px;
   }
   
-  #search-btn ,viewToggle{
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-  
+  /* Book Cards */
   .book {
-    width: 200px;
-    height: 300px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 350px;
+    background-color: #242424;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 15px;
+    text-align: left;
+    color: white;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  }
+  
+  .book:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  }
+  
+  .book img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
   }
   
   .book h2 {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ffffff;
+    margin: 0.5rem 0;
   }
   
   .book p {
     font-size: 0.7rem;
+    color: #cccccc;
+    margin: 5px 0;
+  }
+  
+  /* VIEW TOGGLE STYLES*/
+  /* Grid View */
+  .grid-view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* List View */
+  .list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .list-view .book {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    padding: 15px;
+    gap: 20px;
+    margin: 0 auto;
+  }
+  
+  .list-view .book img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .list-view .book .text-content {
+    flex-grow: 1;
+    font-size: 1rem;
+  }
+  
+  /* SORT DROPDOWN */
+  #sortSelect {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #222;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  #sortSelect:hover {
+    border-color: #666;
+  }
+  
+  #sortSelect:focus {
+    outline: none;
+    border-color: #888;
+  }
+  
+  #sortSelect option {
+    background-color: #222;
+    color: #e0e0e0;
+  }
+  
+  /* PAGINATION */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
   }
   
   .pagination button {
-    font-size: 14px;
-    padding: 8px 16px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #282828;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .pagination button:hover {
+    background: #333;
+    transform: translateY(-2px);
   }
   
   .pagination span {
-    font-size: 16px;
+    font-size: 18px;
+    color: #e0e0e0;
   }
-}
+  
+  /* LINKS & TEXT STYLES */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  span {
+    font-size: 18px;
+    color: #e0e0e0;
+  }
+  
+  /* RESPONSIVE DESIGN*/
+  @media (max-width: 768px) {
+    #header {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 10px;
+    }
+  
+    #search-container {
+      margin: 0;
+      justify-content: center;
+    }
+  
+    #search-bar {
+      margin-left: 0;
+      max-width: 100%;
+    }
+  
+    #button-container {
+      justify-content: center;
+      margin-top: 10px;
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #search-bar {
+      font-size: 18px;
+      padding: 8px 10px;
+    }
+  
+    #search-btn, #viewToggle {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .book {
+      width: 200px;
+      height: 300px;
+      padding: 10px;
+    }
+  
+    .book h2 {
+      font-size: 0.9rem;
+    }
+  
+    .book p {
+      font-size: 0.7rem;
+    }
+  
+    .pagination button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .pagination span {
+      font-size: 16px;
+    }
+  }
+  

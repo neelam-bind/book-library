@@ -14,9 +14,14 @@
         <input type="text" id ="search-bar" placeholder="Search by title or author">
 
         <div id="button-container">
-            <button id="search-btn">Search</button>
-            <button id="viewToggle">List View</button>
+            <button id="search-btn">Search <i class="fas fa-search search-icon"></i></button>
+            <button id="viewToggle">List View <i class="fas fa-th-large"></i></button>
         </div>
+        <select id="sortSelect">
+            <option value="title">Sort by Title</option>
+            <option value="date">Sort by Date</option>
+          </select>
+          
     </div>
     
     <div id ="booksContainer">
